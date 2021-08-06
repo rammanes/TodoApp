@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(120deg, skyblue, royalblue);
+    min-height: 100vh;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+header,form{
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    display: flex;
+}
+
+form input, form button {
+    border: none;
+    font-size: 2rem;
+    background: white;
+    padding: 0.5rem;
+}
+
+form button{
+    background: royalblue;
+    color: white;
+    cursor: pointer;
+    transform:all 0.3s ease;
+}
+
+form button:hover{
+    background: white;
+    color: royalblue;
+}
+
+.todos-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todos-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todos{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item{
+    flex: 1;
+    padding: 0rem, 0.5rem;
+}
+
+.trash-btn, .completed-btn{
+    background: royalblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.completed-btn{
+    background: green;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+  
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select{
+    color: royalblue;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: royalblue;
+    top: 0;
+    right:0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
